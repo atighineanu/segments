@@ -78,7 +78,7 @@ func MERGEII(intervals []Interval) ([]Interval, error) {
 //------------------SOLUTION III--------------------
 func MERGEIII(intervals []Interval) ([]Interval, error) {
 	sort.SliceStable(intervals, func(i, j int) bool { //----- if we sort by element.Begin, it will be easier (and clearer) then to write
-		return intervals[i].Begin < intervals[j].Begin //-----  proper conditions for a merged segments slice.
+		return intervals[i].Begin < intervals[j].Begin //-----simpler conditions for updating the slice of merged intervals.
 	})
 	for i := 0; i < len(intervals)-1; i++ {
 		if !(intervals[i].End < intervals[i+1].Begin) { //--- because this slice is ordered as f(elem.Begin) -> it's enough to just compare

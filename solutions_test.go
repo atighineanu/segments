@@ -50,12 +50,12 @@ func TestIntervals(t *testing.T) {
 	test8, _ := utils.MERGEII(bigslice)
 	test9, _ := utils.MERGEIII(bigslice)
 	if !reflect.DeepEqual(test7, check7) && !reflect.DeepEqual(test7, check8) {
-		t.Errorf("Interval overlapping was incorrect, got: %v, want: %v, or: %v\n", test6, check4, check6)
+		t.Errorf("Interval overlapping was incorrect, got: %v, want: %v, or: %v\n", test7, check7, check8)
 	}
 	if !reflect.DeepEqual(test8, check7) && !reflect.DeepEqual(test8, check8) {
-		t.Errorf("Interval overlapping was incorrect, got: %v, want: %v, or: %v\n", test6, check4, check6)
+		t.Errorf("Interval overlapping was incorrect, got: %v, want: %v, or: %v\n", test8, check7, check8)
 	}
 	if !reflect.DeepEqual(test9, check7) && !reflect.DeepEqual(test9, check8) {
-		t.Errorf("Interval overlapping was incorrect, got: %v, want: %v, or: %v\n", test6, check4, check6)
+		t.Errorf("Interval overlapping was incorrect, got: %v, want: %v, or: %v\n", test9, check7, check8)
 	}
 }
